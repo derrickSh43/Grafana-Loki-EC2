@@ -22,7 +22,7 @@ sudo systemctl start grafana-server
 sudo systemctl enable grafana-server
 
 # Install and configure Loki
-wget https://github.com/grafana/loki/releases/download/v2.8.2/loki-linux-amd64.zip
+sudo wget https://github.com/grafana/loki/releases/download/v2.8.2/loki-linux-amd64.zip
 sudo dnf install -y unzip
 unzip loki-linux-amd64.zip
 sudo mv loki-linux-amd64 /usr/local/bin/loki
