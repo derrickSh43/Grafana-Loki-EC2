@@ -68,9 +68,19 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'node_exporter'
-    static_configs:
-      - targets: [] # Add external Node Exporter targets here, e.g., ['<node-exporter-ip>:9100']
+  - job_name: 'node_exporter_ec2'
+    ec2_sd_configs:
+      - region: <your-aws-region> # e.g., us-east-1
+        access_key: <your-access-key>
+        secret_key: <your-secret-key>
+    relabel_configs:
+      - source_labels: [__meta_ec2_tag_Name]
+        regex: '.*node-exporter.*'
+        action: keep
+      - source_labels: [__meta_ec2_private_ip]
+        target_label: __address__
+        replacement: '${1}:9100'
+
 EOF
 
 # Create Prometheus systemd service
