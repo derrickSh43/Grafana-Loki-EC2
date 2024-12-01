@@ -1,7 +1,7 @@
 # Grafana-Loki-EC2
 Grafana-Loki-EC2
 
-[Link to the Repo]([https://example.com](https://github.com/derrickSh43/Grafana-Loki-EC2))
+[Link to the Repo](https://github.com/derrickSh43/Grafana-Loki-EC2)
 
 
 ---
