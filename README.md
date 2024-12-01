@@ -16,6 +16,27 @@ This repository provides two distinct projects for deploying observability tools
 2. **Grafana, Loki, and Prometheus**: Builds on the first by adding Prometheus for metrics collection and monitoring.
 
 ---
+## Table of Contents
+
+1. [Projects](#projects)
+   
+2. [Overview](#overview)
+   
+   
+3. [Shared EC2 Recommendations](#shared-ec2-recommendations)
+   
+4. [Shared Post-Launch Instructions](#shared-post-launch-instructions)
+   
+5. [Grafana, Loki, and Prometheus Setup](#grafana-loki-and-prometheus-setup)
+   
+6. [Dashboards](#dashboards)
+   
+7. [Troubleshooting](#troubleshooting)
+   
+8. [Scaling Recommendations](#scaling-recommendations)
+   
+9. [Conclusion](#conclusion)
+
 
 ## **Projects**
 
