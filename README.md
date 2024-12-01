@@ -3,7 +3,6 @@
 # Grafana-Loki-EC2
 
 [![View Project: Grafana and Loki](https://img.shields.io/badge/View%20Project-Grafana%20and%20Loki-brightgreen)](https://github.com/derrickSh43/Grafana-Loki-EC2)
-[![View Project: Grafana, Loki, and Prometheus](https://img.shields.io/badge/View%20Project-Grafana%2C%20Loki%2C%20Prometheus-blue)](https://github.com/derrickSh43/Grafana-Loki-Prometheus-EC2)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-informational?style=flat&logo=github&logoColor=white&color=blue)](https://github.com/derrickSh43)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/derrick-weil-11726253)
 
