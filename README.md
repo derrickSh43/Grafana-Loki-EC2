@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/39e53100-f9cd-4e76-96e1-ac586eb621db)
+
 # Grafana-Loki-EC2
 Grafana-Loki-EC2
 
