@@ -122,9 +122,9 @@ sudo systemctl restart prometheus
 2. Add a new panel.
 3. Query Loki for logs:
    
-bash
+```bash
    {job="webserver"}
-
+```
 4. Save the dashboard for easy access.
 
 ### **3. For Prometheus**
@@ -136,31 +136,31 @@ Use dashboards tailored to node metrics or application metrics.
 
 ### **1. Logs Not Showing in Grafana**
 - Check if Loki is running:
-  
-bash
-  sudo systemctl status loki
 
+```bash
+  sudo systemctl status loki
+```
 - Verify the Promtail configuration on source instances:
   
-bash
+```bash
   sudo journalctl -u promtail
-
+```
 - Ensure the Loki server URL in Promtail matches the actual Loki instance.
 
 ### **2. Grafana Not Accessible**
 - Confirm Grafana is running:
   
-bash
+```bash
   sudo systemctl status grafana-server
-
+```
 - Check the firewall or security group for port 3000.
 
 ### **3. Logs Not Ingested by Loki**
 - Inspect Loki logs for errors:
   
-bash
+```bash
   sudo journalctl -u loki
-
+```
 ### Metrics Not Showing in Grafana (Grafana-Loki-Prometheus)
 - Verify Prometheus is running:
   ```bash
