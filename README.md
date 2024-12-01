@@ -1,7 +1,8 @@
 # Grafana-Loki-EC2
 Grafana-Loki-EC2
 
-[Link to the Repo](https://github.com/derrickSh43/Grafana-Loki-EC2)
+[![View Project](https://img.shields.io/badge/View%20Project-Click%20Here-brightgreen)](https://github.com/derrickSh43/Grafana-Loki-EC2)
+
 
 
 ---
