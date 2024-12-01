@@ -111,24 +111,56 @@ sudo systemctl restart prometheus
 
 ---
 
-## **Dashboards**
+## **Getting Started with Grafana Dashboards**
 
-### For Both Projects
-- **Loki Dashboard**: Import pre-built dashboard ID `13685` to visualize logs.
+### **1. Import Pre-Built Dashboards**
+- Grafana has pre-built dashboards for Loki:
+  1. Go to **Create > Import**.
+  2. Use dashboard ID 13685 (Loki dashboard) or similar.
 
-### For Grafana-Loki-Prometheus
-- **Prometheus Dashboard**: Use pre-built dashboards tailored for Prometheus metrics.
+### **2. Create a Custom Dashboard**
+1. Go to **Create > Dashboard**.
+2. Add a new panel.
+3. Query Loki for logs:
+   
+bash
+   {job="webserver"}
+
+4. Save the dashboard for easy access.
+
+### **3. For Prometheus**
+Use dashboards tailored to node metrics or application metrics.
 
 ---
 
 ## **Troubleshooting**
 
-### Logs Not Showing in Grafana
-- Check Loki and Promtail statuses:
-  ```bash
+### **1. Logs Not Showing in Grafana**
+- Check if Loki is running:
+  
+bash
   sudo systemctl status loki
-  sudo systemctl status promtail
-  ```
+
+- Verify the Promtail configuration on source instances:
+  
+bash
+  sudo journalctl -u promtail
+
+- Ensure the Loki server URL in Promtail matches the actual Loki instance.
+
+### **2. Grafana Not Accessible**
+- Confirm Grafana is running:
+  
+bash
+  sudo systemctl status grafana-server
+
+- Check the firewall or security group for port 3000.
+
+### **3. Logs Not Ingested by Loki**
+- Inspect Loki logs for errors:
+  
+bash
+  sudo journalctl -u loki
 
 ### Metrics Not Showing in Grafana (Grafana-Loki-Prometheus)
 - Verify Prometheus is running:
@@ -136,24 +168,13 @@ sudo systemctl restart prometheus
   sudo systemctl status prometheus
   ```
 - Confirm scrape targets are configured correctly in `prometheus.yml`.
-
 ---
 
 ## **Scaling Recommendations**
 
-### For Both Projects
-1. **Separate Services**: Deploy Grafana, Loki, and Prometheus on separate instances for scalability.
-2. **Loki Storage**: Use S3 as the backend for Loki to handle high log volumes.
-
-### For Grafana-Loki-Prometheus
-1. **Prometheus High Availability**: Set up clustering or federation for larger environments.
-2. **Storage Scaling**: Allocate additional storage for metrics retention.
-
----
-
-## **Conclusion**
-
-These projects provide scalable solutions for observability using Grafana, Loki, and Prometheus on EC2 instances. Start with the Grafana-Loki setup for log aggregation and visualization, and expand to the Grafana-Loki-Prometheus project for full observability with metrics monitoring.
-
-Explore the configurations and adapt them to your specific environment.
-```
+1. **Separate Grafana and Loki**:
+   - For larger environments, deploy Grafana and Loki on separate instances.
+2. **Use S3 for Loki Storage**:
+   - Configure S3 as the backend for Loki to handle large volumes of logs.
+3. **Clustered Setup**:
+   - Deploy multiple Loki instances with a load balancer for redundancy and scalability. ---- I have this but have two files here one with just Grafana and loki which this covers and one that has those and adds Prometheus , can you update the read me so it reflects that there are two file and prometheus part
