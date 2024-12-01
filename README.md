@@ -4,6 +4,8 @@
 Grafana-Loki-EC2
 
 [![View Project](https://img.shields.io/badge/View%20Project-Click%20Here-brightgreen)](https://github.com/derrickSh43/Grafana-Loki-EC2)
+- [Visit My GitHub Profile](https://github.com/derrickSh43)
+- [Visit My LinkedIn Profile](www.linkedin.com/in/derrick-weil-11726253)
 
 
 
